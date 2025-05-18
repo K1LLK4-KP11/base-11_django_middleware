@@ -1,0 +1,9 @@
+<h2>Log In</h2>  
+{% if form.errors %}  
+    <div class="alert alert-danger">Invalid username or password.</div>  
+{% endif %}  
+<form method="post">  
+    {% csrf_token %}  
+    {{ form.as_p }}  
+    <button type="submit">Log In</button>  
+</form>  
